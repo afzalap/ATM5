@@ -1,0 +1,5 @@
+{"Name": "Afzal" ,"Phone No.": "7975578890" ,"Account No.": "1132568899" ,"Balance": "192100.000000" ,"Card No.": "68604556" ,"ATM Pin": "5675","isBlocked": "0"}
+{"Name": "abhijeet" ,"Phone No.": "6204090820" ,"Account No.": "1132568919" ,"Balance": "8500.000000" ,"Card No.": "68604576" ,"ATM Pin": "1234","isBlocked": "0"}
+{"Name": "adv" ,"Phone No.": "123456781" ,"Account No.": "1132568929" ,"Balance": "600.000000" ,"Card No.": "68604586" ,"ATM Pin": "7891","isBlocked": "0"}
+{"Name": "aaa" ,"Phone No.": "1235567731" ,"Account No.": "1132568939" ,"Balance": "0.000000" ,"Card No.": "68604596" ,"ATM Pin": "1234","isBlocked": "0"}
+{"Name": "sahil" ,"Phone No.": "98235628172" ,"Account No.": "1132568959" ,"Balance": "810.000000" ,"Card No.": "68604616" ,"ATM Pin": "1234","isBlocked": "0"}
