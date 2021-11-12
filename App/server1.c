@@ -149,6 +149,11 @@ void fileOpen()
     }
 }
 
+//function name: checkValidString
+//return type: bool
+//parameters: char sName[]
+//uses: to check valid string
+
 bool checkValidString(char sName[])
 {
     for (int i = 0; sName[i] != '\0'; i++)
@@ -161,6 +166,10 @@ bool checkValidString(char sName[])
     return true;
 }
 
+//function name: checkValidPhoneNo
+//return type: bool
+//parameters: char sPhoneNo[]
+//uses:  to check valid phone no
 bool checkValidPhoneNo(char sPhoneNo[])
 {
     int iCount = 0;
@@ -179,9 +188,10 @@ bool checkValidPhoneNo(char sPhoneNo[])
 
     return false;
 }
-// bool checkValidAccount(long long int iAccountNo){
-//     for (int i = 0; i<)
-// }
+//function name: printError
+//return type: void
+//parameters: char *msg
+//uses:  to print error message
 void printError(char *msg)
 {
     // printf("\n--------------------------------------\n");
@@ -191,6 +201,10 @@ void printError(char *msg)
     // printf("--------------------------------------\n\n");
 }
 
+//function name: printSuccess
+//return type: void
+//parameters: char *msg
+//uses: to print success message
 void printSuccess(char *msg)
 {
     printf("\n--------------------------------------\n");
@@ -199,7 +213,10 @@ void printSuccess(char *msg)
     // printf("***************************************\n\n");
     printf("--------------------------------------\n\n");
 }
-
+//function name:  readAccountNo
+//return type:bool
+//parameters: long long int *llAccountNo
+//uses: to read account number
 bool readAccountNo(long long int *llAccountNo)
 {
     char *eptr;
@@ -224,6 +241,10 @@ bool readAccountNo(long long int *llAccountNo)
     }
 }
 
+//function name: readCardNo
+//return type:bool
+//parameters: long long int *llCardNo
+//uses: to read card number
 bool readCardNo(long long int *llCardNo)
 {
     char *eptr;
@@ -248,6 +269,11 @@ bool readCardNo(long long int *llCardNo)
     }
 }
 
+//function name:  readPin
+//return type:bool
+//parameters:int *iPin
+//uses: to read pin
+
 bool readPin(int *iPin)
 {
     char sPin[5];
@@ -270,7 +296,10 @@ bool readPin(int *iPin)
         return false;
     }
 }
-
+//function name:  readAmt
+//return type:bool
+//parameters:int *iAmt
+//uses: to read amount
 bool readAmt(int *iAmt)
 {
     char sAmt[9];

@@ -140,6 +140,10 @@ reenterCard2:
     printf("--------------------------------------\n");
 }
 
+//function name:  changePin
+//return type:void
+//parameter: none
+//use: to change pin
 void changePin()
 {
     long long int llCardNo;
@@ -191,6 +195,10 @@ reEnterPin5:
     return;
 }
 
+//function name:  depositAtm
+//return type:void
+//parameter: none
+//use: to deposit money
 void depositAtm()
 {
     int iChoice;

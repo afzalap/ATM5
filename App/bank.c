@@ -49,7 +49,10 @@ bool checkAccount(long long int llAccountNo)
     }
     return false;
 }
-
+//function name:  checkCard
+//return type:bool
+//parameter: long long int llCardNo
+//use: to check card
 bool checkCard(long long int llCardNo)
 {
     if (first == NULL)
@@ -68,6 +71,10 @@ bool checkCard(long long int llCardNo)
     return false;
 }
 
+//function name:   checkBalance
+//return type: float
+//parameter: long long int llCardNo
+//use: to checkBalance
 float checkBalance(long long int llAccountNo)
 {
     if (first == NULL)
@@ -86,6 +93,10 @@ float checkBalance(long long int llAccountNo)
     return 0;
 }
 
+//function name:   creatAccount
+//return type: void
+//parameter: none
+//use: to creat account
 void creatAccount()
 {
     char sName[SIZE];
@@ -167,9 +178,9 @@ reenterdb:
     return;
 }
 
-//function name: depositBank
+//function name: deposit
 //return type: void
-//parameters: none
+//parameters: long long llAccountNo, int iAmt
 //use: to deposit money in bank
 
 void deposit(long long llAccountNo, int iAmt)
@@ -185,6 +196,11 @@ void deposit(long long llAccountNo, int iAmt)
         cur = cur->link;
     }
 }
+
+//function name: depositBank
+//return type: void
+//parameters: none
+//use: to deposit in bank
 
 void depositBank()
 {
@@ -284,6 +300,11 @@ reenterAmtW:
     printf("--------------------------------------\n");
 }
 
+//function name: accountTransfer
+//return type: void
+//parameters: none
+//use: to transfer money from one account to another account
+
 void accountTransfer()
 {
     long long int llAccountNo1;
@@ -345,6 +366,10 @@ reenterAT:
     printf("Balance               : %f\n", checkBalance(llAccountNo1));
     printf("--------------------------------------\n");
 }
+//function name: unBlockcard
+//return type: void
+//parameters: none
+//use: to unblock the card
 
 void unBlockCard()
 {
@@ -382,6 +407,10 @@ reenterPin:
     }
     printError("Card UnBlocking Unsuccessful");
 }
+//function name: changePhoneNo
+//return type: void
+//parameters: none
+//use: to change phone number
 
 void changePhoneNo()
 {
@@ -422,6 +451,10 @@ reEnterPhoneNocp:
     }
     printError("Phone Number changing was unsuccessful");
 }
+//function name:  closeAccount
+//return type: void
+//parameters: none
+//use: to close account
 
 void closeAccount()
 {
@@ -485,6 +518,12 @@ reenterca:
     }
     printError("Account Closing was unsuccessful");
 }
+
+//function name:  revertUnsuccessful
+//return type: void
+//parameters: none
+//use: to unsuccessful transaction
+
 
 void revertUnsuccessful()
 {

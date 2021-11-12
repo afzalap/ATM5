@@ -143,6 +143,10 @@ float checkBalanceA(long long int llAccountNo)
     return 0;
 }
 
+//function name: verification
+//return type: bool
+//parameters: long long int llCardNo
+//use: to verify card number
 bool verification(long long int llCardNo)
 {
 
@@ -190,10 +194,10 @@ reinitiate:
     return true;
 }
 
-//function name: withdraw
-//return type: void
-//parameters: long long int llCardNo, int iAmt
-//uses: to withdraw money from atm
+//function name: checkAccount
+//return type: bool
+//parameters: long long int llCardNo
+//uses: to check account
 bool checkAccount(long long int llAccountNo)
 {
     if (first == NULL)
@@ -211,7 +215,10 @@ bool checkAccount(long long int llAccountNo)
     }
     return false;
 }
-
+//function name: withdraw
+//return type: void
+//parameters: long long int llCardNo,int iAmt
+//use:to withdraw amount
 void withdraw(long long int llCardNo, int iAmt)
 {
     user *cur = first;
@@ -228,8 +235,8 @@ void withdraw(long long int llCardNo, int iAmt)
 
 //function name:  logTnx
 //return type: void
-//parameters: long long int llAccountNo, long long int llCardNo, int iAmt
-//uses: to open transaction file
+//parameters: long long int llAccountNo, long long int llCardNo, int iAmt,char tnxType[SIZE], int tnxSuccess
+//uses: for log transaction file
 
 void logTnx(long long int llAccountNo, long long int llCardNo, int iAmt, char tnxType[SIZE], int tnxSuccess)
 {
@@ -244,10 +251,10 @@ void logTnx(long long int llAccountNo, long long int llCardNo, int iAmt, char tn
     fclose(fpTnx);
 }
 
-//function name:  printR
+//function name:  logTnxA
 //return type: void
-//parameters: long long int llCardNo, int iAmt
-//uses: to print transaction Recipt
+//parameters: long long int llCardNo, int iAmt,char tnxType[SIZE]
+//uses: for amount transaction
 
 void logTnxA(long long int llAccountNo, int iAmt, char tnxType[SIZE])
 {
@@ -260,7 +267,11 @@ void logTnxA(long long int llAccountNo, int iAmt, char tnxType[SIZE])
     fprintf(fpTnx, TNX_FORMAT_OUT, llAccountNo, tnxType, iAmt, 1);
     fclose(fpTnx);
 }
-
+ 
+ //function name: printRW
+//return type: void
+//parameters: long long int llCardNo, int iAmt, int tnxSuccess
+//uses: to print withdraw receipt
 void printRW(long long int llCardNo, int iAmt, int tnxSuccess)
 {
     char tnxType[SIZE] = "Withdraw";
@@ -283,6 +294,10 @@ void printRW(long long int llCardNo, int iAmt, int tnxSuccess)
     }
 }
 
+//function name: printRD
+//return type: void
+//parameters: long long int llCardNo, int iAmt
+//uses: to print deposit receipt
 void printRD(long long int llCardNo, int iAmt)
 {
     user *cur = first;
@@ -304,7 +319,10 @@ void printRD(long long int llCardNo, int iAmt)
         cur = cur->link;
     }
 }
-
+//function name: printRA
+//return type: void
+//parameters: long long int llCardNo, int iAmt
+//uses: to print cardless deposit receipt
 void printRA(long long int llAccountNo, int iAmt)
 {
     user *cur = first;
@@ -326,7 +344,11 @@ void printRA(long long int llAccountNo, int iAmt)
     }
 }
 
-void changePinServer(long long int llCardNo, int iNewPin)
+//function :changePinServer
+//return type: void
+//parameters: long long int llCardNo, int iNewPin
+//uses: to change pin
+void changePinServer(long long int llCardNo,int iNewPin)
 {
     user *cur = first;
     while (cur != NULL)
@@ -340,6 +362,10 @@ void changePinServer(long long int llCardNo, int iNewPin)
     }
 }
 
+//function : ServerCardDeposit
+//return type: void
+//parameters: long long int llCardNo, int iAmt
+//uses: for card deposit
 void ServerCardDeposit(long long int llCardNo, int iAmt)
 {
     user *cur = first;
@@ -353,7 +379,10 @@ void ServerCardDeposit(long long int llCardNo, int iAmt)
         cur = cur->link;
     }
 }
-
+//function : ServerCardLessDeposit
+//return type: void
+//parameters: long long int llAccountNo, int iAmt
+//uses: for cardless deposit
 void ServerCardLessDeposit(long long int llAccountNo, int iAmt)
 {
     user *cur = first;
@@ -368,6 +397,10 @@ void ServerCardLessDeposit(long long int llAccountNo, int iAmt)
     }
 }
 
+//function : cardDeposit
+//return type: void
+//parameters: none
+//uses: to print card deposit
 void cardDeposit()
 {
     long long int llCardNo;
@@ -407,6 +440,10 @@ void cardDeposit()
     return;
 }
 
+//function : cardLessDeposit
+//return type: void
+//parameters: none
+//uses: to print card less deposit
 void cardLessDeposit()
 {
     long long int llAccountNo;
